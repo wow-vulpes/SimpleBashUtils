@@ -85,15 +85,31 @@ src/
 ```bash
 cd src/cat
 
-make all      # сборка + запуск тестов
-make s21_cat  # только сборка
-make clean    # очистка
+make s21_cat                          # сборка программы
+./s21_cat <file>                      # запуск (файл должен существовать)
 ```
 - аналогично для `s21_grep`
 ```bash
 cd src/grep
 
-make all  
-make s21_grep  
-make clean
+make s21_grep                                  # сборка программы
+./s21_grep <pattern> <file>                    # запуск (файл должен существовать)
+```
+
+## Цели Makefile
+
+- `s21_cat`
+``` bash
+make all           # сборка программы + запуск тестов
+make clean         # очистка
+make s21_cat       # сборка s21_cat
+make tests         # запуск тестов
+```
+
+- `s21_grep`
+``` bash
+make all           # сборка программы + запуск тестов
+make clean         # очистка
+make s21_grep       # сборка s21_cat
+make tests         # запуск тестов
 ```
